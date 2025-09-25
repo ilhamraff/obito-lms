@@ -22,6 +22,8 @@ class SectionContentResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::DocumentText;
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Products';
+
     protected static ?string $recordTitleAttribute = 'SectionContent';
 
     public static function form(Schema $schema): Schema

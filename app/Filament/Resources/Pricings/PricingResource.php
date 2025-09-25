@@ -22,6 +22,8 @@ class PricingResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::CurrencyDollar;
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Managements';
+
     protected static ?string $recordTitleAttribute = 'Pricing';
 
     public static function form(Schema $schema): Schema

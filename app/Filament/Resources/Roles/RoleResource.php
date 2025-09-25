@@ -22,6 +22,8 @@ class RoleResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ShieldCheck;
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Managements';
+
     protected static ?string $recordTitleAttribute = 'Role';
 
     public static function form(Schema $schema): Schema

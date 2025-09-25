@@ -22,6 +22,8 @@ class CourseMentorResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-user-group';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Products';
+
     protected static ?string $recordTitleAttribute = 'CourseMentor';
 
     public static function form(Schema $schema): Schema

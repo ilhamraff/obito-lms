@@ -22,6 +22,8 @@ class TransactionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ReceiptPercent;
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Customers';
+
     protected static ?string $recordTitleAttribute = 'Transaction';
 
     public static function form(Schema $schema): Schema
