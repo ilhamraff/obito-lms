@@ -30,7 +30,12 @@ class UserForm
                     'Project Manager' => 'Project Manager',
                 ])
                 ->required(),
-            // Select::make('roles')->label('Role')->relationship('roles', 'name')->required(),
+            Select::make('roles')
+                ->label('Role')
+                ->relationship('roles', 'name')
+                ->required()
+                ->multiple()
+                ->preload(),
             FileUpload::make('photo')->required()->image(),
         ]);
     }
