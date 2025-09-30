@@ -68,6 +68,10 @@ Route::middleware('auth')->group(function () {
          * ------------------------------
          */
         Route::middleware(['check.subscription'])->group(function () {
+            /**
+             * Course Learning
+             * ------------------------------
+             */
             Route::get('/dashboard/join/{course:slug}', [CourseController::class, 'join'])->name(
                 'dashboard.course.join',
             );
