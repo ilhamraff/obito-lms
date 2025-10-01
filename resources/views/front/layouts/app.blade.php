@@ -22,6 +22,16 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        {{-- Navigation --}}
+        <header>
+            @auth
+                <x-navigation-auth />
+            @else
+                <x-nav-guest />
+            @endauth
+        </header>
+
+        {{-- Page content --}}
         @yield('content')
 
         @stack('after-scripts')

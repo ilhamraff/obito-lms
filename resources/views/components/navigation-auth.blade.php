@@ -21,7 +21,7 @@
             <a href="#" class="flex shrink-0">
                 <img src="{{ asset('assets/images/icons/device-message.svg') }}" class="flex shrink-0" alt="icon">
             </a>
-            <a href="catalog-v2.html" class="flex shrink-0">
+            <a href="#" class="flex shrink-0">
                 <img src="{{ asset('assets/images/icons/category.svg') }}" class="flex shrink-0" alt="icon">
             </a>
             <a href="#" class="flex shrink-0">

@@ -101,7 +101,7 @@ Route::middleware('auth')->group(function () {
 
         Route::post('/booking/payment/midtrans', [
             FrontController::class,
-            'payment_store_midtrans',
+            'paymentStoreMidtrans',
         ])->name('front.payment_store_midtrans');
     });
 });

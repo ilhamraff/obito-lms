@@ -2,7 +2,7 @@
 @section('title', 'Pricing - Obito LMS')
 
 @section('content')
-    <x-nav-guest />
+    {{-- <x-nav-guest /> --}}
     <main class="flex flex-1 flex-col justify-center">
         <section id="pricing" class="mt-[50px] flex flex-col items-center gap-[33px]">
             <div class="flex w-full max-w-[500px] flex-col items-center gap-[10px]">
@@ -460,3 +460,7 @@
         </section>
     </main>
 @endsection
+
+@push('after-scripts')
+    <script src="{{ asset('js/dropdown-navbar.js') }}"></script>
+@endpush

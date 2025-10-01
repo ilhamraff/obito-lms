@@ -67,7 +67,13 @@ class FrontController extends Controller
 
             return response()->json(['snap_token' => $snapToken], 200);
         } catch (\Exception $e) {
-            return response()->json(['error' => 'Payment failed: ', $e->getMessage()], 500);
+            return response()->json(
+                [
+                    'error' => 'Payment failed',
+                    'message' => $e->getMessage(),
+                ],
+                500,
+            );
         }
     }
 
@@ -97,6 +103,6 @@ class FrontController extends Controller
                 ->with('error', 'No recent subscription found');
         }
 
-        return view('front.checkout.success', compact('pricing'));
+        return view('front.checkout_success', compact('pricing'));
     }
 }
