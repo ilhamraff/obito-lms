@@ -24,7 +24,12 @@ class CourseController extends Controller
 
     public function details(Course $course)
     {
-        $course->load(['category', 'benefits', 'courseSection.sectionContents']);
+        $course->load([
+            'category',
+            'benefits',
+            'courseSections.sectionContents',
+            'courseMentors.mentor',
+        ]);
 
         return view('courses.details', compact('course'));
     }
@@ -35,7 +40,7 @@ class CourseController extends Controller
         $firstSectionAndContent = $this->courseService->getFirstSectionAndContent($course);
 
         return view(
-            'course.success_joined',
+            'courses.success_joined',
             array_merge(compact('course', 'studentName'), $firstSectionAndContent),
         );
     }
@@ -48,12 +53,12 @@ class CourseController extends Controller
             $sectionContentId,
         );
 
-        return view('course.learning', $learningData);
+        return view('courses.learning', $learningData);
     }
 
     public function learning_finished(Course $course)
     {
-        return view('course.learning_finished', compact('course'));
+        return view('courses.learning_finished', compact('course'));
     }
 
     public function search_courses(Request $request)

@@ -2,7 +2,6 @@
 @section('title', 'Register - Obito LMS')
 
 @section('content')
-    <x-nav-guest />
     <main class="relative flex h-full flex-1">
         <section class="flex flex-1 items-center px-5 py-5 pl-[calc(((100%-1280px)/2)+75px)]">
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data"
@@ -93,6 +92,8 @@
             </div>
         </div>
     </main>
-
-    <script src="{{ asset('js/photo-upload.js') }}"></script>
 @endsection
+
+@push('after-scripts')
+    <script src="{{ asset('js/photo-upload.js') }}"></script>
+@endpush

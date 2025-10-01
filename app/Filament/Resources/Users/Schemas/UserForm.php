@@ -36,7 +36,12 @@ class UserForm
                 ->required()
                 ->multiple()
                 ->preload(),
-            FileUpload::make('photo')->required()->image(),
+            FileUpload::make('photo')
+                ->required()
+                ->image()
+                ->disk('public')
+                ->directory('photos')
+                ->openable(),
         ]);
     }
 }

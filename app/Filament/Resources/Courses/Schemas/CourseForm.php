@@ -18,7 +18,12 @@ class CourseForm
             //
             Fieldset::make('Details')->schema([
                 TextInput::make('name')->maxLength(255)->required(),
-                FileUpload::make('thumbnail')->required()->image(),
+                FileUpload::make('thumbnail')
+                    ->disk('public')
+                    ->directory('thumbnails')
+                    ->required()
+                    ->image()
+                    ->openable(),
             ]),
             Fieldset::make('Additional')->schema([
                 Repeater::make('benefits')

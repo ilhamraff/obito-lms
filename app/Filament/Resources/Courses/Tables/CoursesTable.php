@@ -20,7 +20,7 @@ class CoursesTable
         return $table
             ->columns([
                 //
-                ImageColumn::make('thumbnail'),
+                ImageColumn::make('thumbnail')->disk('public'),
                 TextColumn::make('name')->searchable(),
                 TextColumn::make('category.name'),
                 IconColumn::make('is_popular')

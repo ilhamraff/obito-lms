@@ -2,7 +2,6 @@
 @section('title', 'Login - Obito LMS')
 
 @section('content')
-    <x-nav-guest />
     <main class="relative flex h-full flex-1">
         <section class="flex flex-1 items-center px-5 py-5 pl-[calc(((100%-1280px)/2)+75px)]">
             <form method="POST" action="{{ route('login') }}"
