@@ -77,7 +77,7 @@ class FrontController extends Controller
         }
     }
 
-    public function paymentMidtransNotification(Request $request)
+    public function payment_midtrans_notification(Request $request)
     {
         try {
             $transactionStatus = $this->paymentService->handlePaymentNotification();

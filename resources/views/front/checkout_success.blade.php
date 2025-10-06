@@ -2,7 +2,6 @@
 @section('title', 'Success Checkout - Obito LMS')
 
 @section('content')
-    <x-navigation-auth />
     <nav id="bottom-nav" class="border-obito-grey flex w-full border-b bg-white py-[14px]">
         <ul class="mx-auto flex w-full max-w-[1280px] gap-3 px-[75px]">
             <li class="group">

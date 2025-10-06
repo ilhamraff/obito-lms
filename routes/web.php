@@ -40,13 +40,14 @@ Route::middleware('auth')->group(function () {
          * Subscription Routes
          * ----------------------
          */
-        Route::get('/dashboard/subscriptions/', [DashboardController::class, 'subscription'])->name(
-            'dashboard.subscriptions',
-        );
+        Route::get('/dashboard/subscriptions/', [
+            DashboardController::class,
+            'subscriptions',
+        ])->name('dashboard.subscriptions');
 
         Route::get('/dashboard/subscriptions/{transaction}', [
             DashboardController::class,
-            'subscription.details',
+            'subscription_details',
         ])->name('dashboard.subscriptions.details');
 
         /**

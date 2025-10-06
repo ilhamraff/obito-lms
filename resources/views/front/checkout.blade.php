@@ -2,7 +2,6 @@
 @section('title', 'Checkout - Obito LMS')
 
 @section('content')
-    <x-navigation-auth />
     <div id="path" class="border-obito-grey flex w-full border-b bg-white py-[14px]">
         <div class="mx-auto flex w-full max-w-[1280px] items-center gap-5 px-[75px]">
             <a href="{{ route('front.index') }}" class="last-of-type:font-semibold">Home</a>
